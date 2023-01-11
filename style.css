@@ -1,0 +1,566 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: rgb(255, 255, 255);
+}
+
+.navbar{
+    display: flex;
+    flex-direction: column;
+}
+.navbar .box{
+    display: flex;
+    height: 100px;
+    width: 100%;
+    justify-content: space-between;
+}
+.navbar .box #openbtn{
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar .box #openbtn:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.navbar .box #openbtn i{
+    pointer-events: none;
+    font-size: 40px;
+}
+.navbar .box .image{
+    height: 100%;
+    width: auto;
+    padding: 10px;
+    padding-right: 30px;
+}
+.navbar .box .image img{
+    height: 100%;
+    border-radius: 20px;
+    opacity: 1;
+}
+.navbar .box .image img:hover{
+    opacity: 0.8;
+}
+
+
+/* Menu Box */
+.navbar #menu{
+    height: 100%;
+    width: 0;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 1;
+    overflow-x: hidden;
+    background-color: #fff;
+    border-right: 1px solid rgba(0, 0, 0, 0.4);
+}
+.navbar #menu.active{
+    background-color: rgba(0, 0, 0, 0.4);
+    left: 0px;
+}
+#menu .header{
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+.header .image{
+    height: 100%;
+}
+.header .image img{
+    height: 100%;
+    width: auto;
+    border-radius: 10px;
+}
+.navbar #menu .header #closebtn{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar #menu .header #closebtn:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.navbar #menu .header #closebtn i{
+    font-size: 50px;
+    pointer-events: none;
+}
+#menu .link{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.link span:first-child{
+    font-size: 40px;
+    font-weight: 500;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+}
+.link span:nth-child(2){
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.4);
+    padding: 0px 20px;
+    margin-bottom: 20px;
+}
+.link a{
+    text-decoration: none;
+    font-size: 24px;
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    color: #111;
+    font-weight: 300;
+}
+.link a:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.link a i{
+    margin-right: 10px;
+}
+.link a.active{
+    color: rgb(50, 119, 50);
+}
+
+#menu .iconsbox{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    margin:20px 0;
+    padding: 0 20px;
+}
+#menu .iconsbox>a{
+    display: inline-block;
+    font-size: 30px;
+    color: #111;
+    margin-right: 20px;
+}
+#menu .iconsbox>a:hover{
+    color: rgba(0, 0, 0, 0.5);
+}
+
+main>div{
+    padding: 0 20px;
+}
+main .section1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+main .section1 .header{
+    padding: 20px 0;
+}
+main .section1 .header span{
+    font-size: 48px;
+}
+main .section1 .designlinks{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+main .section1 .designlinks span{
+    font-size: 20px;
+    margin-right: 5px;
+}
+main .section1 .designlinks .dlinks a{
+    font-size: 20px;
+    text-decoration: none;
+    padding: 5px 25px;
+    color: #111;
+}
+main .section1 .designlinks .dlinks a.active{
+    background-color: black;
+    color: #fff;
+}
+main .section1 .designlinks .dlinks a:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+main .section1 .designlinks .dlinks a.active:hover{
+    color: #111;
+}
+main .section1 .designlinks .dlinks a i{
+    margin-right: 10px;
+}
+
+main .section1 .photobox{
+    border-top: 10px solid rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-bottom: 20px;
+}
+main .section1 .photobox>.card{
+    width: 32%;
+    margin-top: 20px;
+}
+main .section1 .photobox .card .image{
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+main .section1 .photobox .card .image>img{
+    width: 100%;
+    height: auto;
+}
+main .section1 .photobox .card span{
+    font-size: 24px;
+    display: inline-block;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+main .section1 .photobox .card p{
+    letter-spacing: 0.5px;
+    color: rgb(19, 19, 116);
+}
+
+main .section1 .slider{
+    margin-bottom: 70px;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .section1 .slider>span{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    /* box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.5); */
+}
+main .section1 .slider>span.active{
+    background-color: #111;
+    color: #fff;
+    box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.5);
+}
+/* main .section1 .slider>span.active:hover{
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #111;
+} */
+main .section1 .slider>span:hover{
+    background-color: #111;
+    color: #fff;
+    box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Section 2 */
+main .section2{
+    padding: 0 20px;
+    margin-bottom: 50px;
+}
+main .section2 .image{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+main .section2 .image>img{
+    height: 200px;
+    width: auto;
+}
+
+main .section2 .textbox span{
+    font-size: 24px;
+}
+main .section2 .textbox p{
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+
+/* Skills Box */
+main .skills{
+    width: 100%;
+    padding-bottom: 20px;
+}
+main .skills .header{
+    font-size: 24px;
+}
+main .skills .skillbox{
+    margin-top: 10px;
+    width: 100%;
+}
+main .skills .skillbox>span{
+    letter-spacing: 1px;
+}
+main .skills .skillbox .progress-bar{
+    height: 40px;
+    width: 100%;
+    margin-top: 10px;
+    background-color: rgb(202, 202, 202);
+}
+main .skills .skillbox .progress-bar .skill-bar{
+    height: 100%;
+    background-color: rgb(129, 129, 129);
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+main .skills .skillbox .progress-bar #pg{
+    width: 90%;
+}
+main .skills .skillbox .progress-bar #wd{
+    width: 80%;
+}
+main .skills .skillbox .progress-bar #ps{
+    width: 75%;
+}
+main .skills a{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: rgb(129, 129, 129);
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+}
+main .skills a>i{
+    margin-right: 10px;
+}
+main .skills a:hover{
+    background-color: rgb(202, 202, 202);
+    color: #111;
+}
+
+/* Price Box */
+main .price{
+    padding: 20px 20px;
+    margin-top: 20px;
+    background-color: rgb(129, 129, 129, 0.5);
+}
+main .price>.header{
+    font-size: 20px;
+}
+main .price .price-list{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+main .price .price-list .price-box{
+    width: 30%;
+    border: 0.5px solid rgb(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+    background-color: #fff;
+}
+main .price .price-list #pro .header{
+    background-color: rgb(32, 145, 153);
+}
+main .price .price-list .price-box:hover{
+    opacity: 1;
+}
+main .price .price-list .price-box>span.header{
+    font-size: 32px;
+    font-weight: 500;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    background-color: #111;
+    color: #fff;
+}
+main .price .price-list .price-box>span{
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    border-bottom: 0.5px solid rgb(0, 0, 0, 0.5);
+}
+main .price .price-list .price-box .fee{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.5);
+}
+main .price .price-list .price-box .fee span:first-child{
+    font-size: 32px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+main .price .price-list .price-box a{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(32, 145, 153) ;
+    text-decoration: none;
+    color: #fff;
+    margin: 20px 0;
+    transition: 0.5s;
+}
+main .price .price-list .price-box a:hover{
+    background-color: #111;
+    transition: 0.5s;
+}
+
+/* Contact Box */
+main .contact{
+    margin-top: 30px;
+    background-color: rgb(129, 129, 129, 0.7);
+    padding-top: 20px;
+}
+main .contact .header{
+    font-size: 24px;
+}
+main .contact .contact-list{
+    margin: 10px 0;
+    display: flex;
+    width: 100%;
+}
+main .contact .contact-list>div{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    background-color:rgb(129, 129, 129) ;
+    color: #fff;
+    font-weight: 300;
+}
+main .contact .contact-list #address{
+    background-color: rgb(32, 145, 153);
+}
+main .contact .contact-list>div i{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+main .contact .inputbox{
+    border-top: 1px solid #fff;
+    margin-top: 50px;
+    padding-top: 30px;
+}
+.inputbox label{
+    font-size: 20px;
+}
+.inputbox input{
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    padding-left: 10px;
+    margin: 5px 0 15px 0;
+}
+.inputbox textarea{
+    width: 100%;
+    font-size: 20px;
+    padding: 5px 0 0 10px;
+    margin: 5px 0 15px 0;
+}
+.inputbox a{
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    margin-bottom: 20px;
+    background-color: #111;
+    font-weight: 300;
+}
+.inputbox a:hover{
+    background-color: rgb(202, 202, 202);
+    color: #111;
+}
+
+/* Footer */
+footer{
+    padding: 30px 20px;
+    margin-top: 20px;
+    background-color: rgb(94, 94, 94);
+    display: flex;
+    color: #fff;
+    justify-content: space-between;
+}
+footer>div{
+    width: 30%;
+}
+
+footer .header{
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+footer .blog .header{
+    margin-left: 20px;
+}
+
+footer .blog .post{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+footer .blog .post:hover{
+    background-color: rgb(202, 202, 202);
+    color: #111;
+}
+footer .blog>div:last-child{
+    border-top: 1px solid #fff;
+}
+footer .blog .post img{
+    height: 80px;
+}
+footer .blog .post .title{
+    display: flex;
+    flex-direction: column;
+    height: 80px;
+    justify-content: space-evenly;
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: 300;
+}
+footer .blog .post .title span:last-child{
+    font-size: 16px;
+}
+
+footer .place .tags{
+    padding: 10px;
+}
+footer .place .tags span{
+    display: inline-block;
+    background-color: rgb(202, 202, 202);
+    color: #111;
+    padding: 2px 10px;
+    margin: 3px;
+}
+footer .place .tags span:nth-child(1){
+    background-color: black;
+    color: #fff;
+    padding: 5px 10px;
+}
+
+main .source{
+    background-color: #111;
+    color: #fff;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    letter-spacing: 1px;
+}
+main .source a{
+    color: #fff;
+    margin-left: 5px;
+}
